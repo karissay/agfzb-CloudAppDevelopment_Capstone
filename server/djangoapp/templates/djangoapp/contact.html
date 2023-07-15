@@ -13,12 +13,7 @@
 
 </head>
 
-    <body>
-    <!-- Remove this line the first time you edit this file -->
-     This is the index page of your Django app!
-    <!--Add a nav bar here -->
-
-    <!--Add a dealer table here -->
+<body>
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -49,40 +44,13 @@
         </div>
     </nav>
 
-    <!--Add a dealer table here -->
-    <div class="container">
-    <table class="table" id="table" data-filter-control="true">
-            <thead>
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Dealer Name</th>
-                    <th scope="col">City</th>
-                    <th scope="col">Address</th>
-                    <th scope="col">Zip</th>
-                    <th data-field="state" data-filter-control="select">State</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for dealer in dealerships %}
-                <tr>
-                    <td>{{dealer.id}}</td>
-                    <td><a href="{% url 'djangoapp:dealer_details' dealer.id %}">{{dealer.full_name}}</a></td>
-                    <td>{{dealer.city}}</td>
-                    <td>{{dealer.address}}</td>
-                    <td>{{dealer.zip}}</td>
-                    <td>{{dealer.st}}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-        </div>
-
-    </body>
-    <script>
-    $(function() {
-        $('#table').bootstrapTable()
-    })
-  </script>
-
+    <p class="mt-5 h1 text-center">
+        Contacts us via email at email@car.com
+    </p>
+    <ol class="mt-5 h1 text-center">
+        <ul><b>Phone No:</b> 1234566</ul>
+        <ul><b>Address:</b>Guayaquil</ul>
+    </ol>
+</body>
 
 </html>
